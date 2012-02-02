@@ -1,3 +1,22 @@
 # Drupal Stanc 0.1-beta1 bash script
 # Create a web portal in a minute
 # by @alesrebec
+
+REQUIREMENTS
+-------------------
+- Unix platform
+- Web server with Apache, MySQL, PHP installed
+- Drush (http://drupal.org/project/drush)
+
+INSTALL
+-------------------
+Put this script somewere you will be able to run it.
+/usr/local/bin or put the directory where drupal_stanc.sh is in $PATH variable.
+
+RUN
+-------------------
+Go to web server's www directory (or subdirectory).
+To run the script just enter: drupal_stanc.sh in your console (or /directory/drupal_stanc.sh if didn't set the $PATH variable)
+The script will the ask you for some info about installation.
+When finished, the installation will be in directory with the name you entered.
+Enjoy your new web portal.
