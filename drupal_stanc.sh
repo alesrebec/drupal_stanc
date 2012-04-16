@@ -1,10 +1,10 @@
 #!/bin/sh #-x
 
-# Drupal Stanc 0.1-beta1 bash script
+# Drupal Stanc 1.0-beta2
 # Create a web portal in a minute
 # by @alesrebec
 
-echo "\nWelcome to Drupal Stanc 0.1-beta1"
+echo "\nWelcome to Drupal Stanc 1.0-beta2"
 echo "Run this script from your web directory. A new folder will be created in current directory."
 echo "Press Enter to continue..."
 read key
@@ -23,8 +23,8 @@ DB_URL="mysql://$DB_USER:$DB_PASS@localhost/$DB_NAME"
 #echo "Created new database: $DB_NAME"
 
 # modules to enable
-CONTRIB_MODULES+=" pathauto variable token wysiwyg i18n google_analytics" # default modules
-CONTRIB_MODULES+="" # enter extra contrib modules
+CONTRIB_MODULES+=" pathauto token wysiwyg views" # default modules
+CONTRIB_MODULES+=" module_instructions admin_menu" # enter extra contrib modules
 
 NEW_DIRS="sites/default/files sites/all/modules/contrib sites/all/modules/custom sites/all/modules/admin"
 
@@ -47,4 +47,11 @@ chmod 777 "sites/default/files"
 # download content modules
 $DRUSH -y dl $CONTRIB_MODULES
 
+# disable modules
+$DRUSH dis overlay shortcut toolbar -y
+
+# enable modules
+$DRUSH en module_instructions admin_menu token pathauto -y
+
+# print message
 echo "\nInstalled in $DRUPAL_DIR directory."

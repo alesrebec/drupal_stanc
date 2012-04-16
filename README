@@ -1,3 +1,16 @@
-# Drupal Stanc 0.1-beta1 bash script
+# Drupal Stanc 1.0-beta2
 # Create a web portal in a minute
 # by @alesrebec
+
+
+Installation:
+
+- Put the drupal_stanc.sh file in your /usr/local/bin 
+directory (or any other directory from where you can 
+call it in terminal).
+
+# How to use:
+
+- Execute drupal_stanc.sh and enter all required info.
+Your site will be waiting for you at your web_server/site_name
+(ex. http://localhost/my_site_name).
