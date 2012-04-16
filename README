@@ -1,4 +1,4 @@
-# Drupal Stanc 1.0-beta2
+# Drupal Stanc
 # Create a web portal in a minute
 # by @alesrebec
 
@@ -9,7 +9,7 @@ Installation:
 directory (or any other directory from where you can 
 call it in terminal).
 
-# How to use:
+How to use:
 
 - Execute drupal_stanc.sh and enter all required info.
 Your site will be waiting for you at your web_server/site_name
