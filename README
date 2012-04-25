@@ -1,16 +1,20 @@
 # Drupal Stanc
-# Create a web portal in a minute
+# The fastest Drupal portal instance creation script you can get
 # by @alesrebec
 
+Requirements:
+- Unix platform (to run Bash scripts)
+- Apache web server with PHP and MySQL
+- Drush (http://www.drush.org)
 
 Installation:
 
 - Put the drupal_stanc.sh file in your /usr/local/bin 
-directory (or any other directory from where you can 
-call it in terminal).
+  directory (or any other directory from where you can 
+  call it in terminal).
 
 How to use:
 
 - Execute drupal_stanc.sh and enter all required info.
-Your site will be waiting for you at your web_server/site_name
-(ex. http://localhost/my_site_name).
+  Your site will be waiting for you at your web_server/site_name
+  (ex. http://localhost/my_site_name).
