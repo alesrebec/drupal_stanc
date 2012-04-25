@@ -3,6 +3,7 @@
 # by @alesrebec
 
 Requirements:
+
 - Unix platform (to run Bash scripts)
 - Apache web server with PHP and MySQL
 - Drush (http://www.drush.org)
