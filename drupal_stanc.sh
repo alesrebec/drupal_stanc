@@ -1,4 +1,4 @@
-#!/bin/sh #-x
+#!/bin/sh
 
 # Drupal Stanc 1.0-beta2
 # Create a web portal in a minute
@@ -23,8 +23,8 @@ DB_URL="mysql://$DB_USER:$DB_PASS@localhost/$DB_NAME"
 #echo "Created new database: $DB_NAME"
 
 # modules to enable
-CONTRIB_MODULES+=" pathauto token wysiwyg views" # default modules
-CONTRIB_MODULES+=" module_instructions admin_menu" # enter extra contrib modules
+CONTRIB_MODULES+=" pathauto token views" # default modules
+CONTRIB_MODULES+=" admin_menu" # enter extra contrib modules
 
 NEW_DIRS="sites/default/files sites/all/modules/contrib sites/all/modules/custom sites/all/modules/admin"
 
@@ -51,7 +51,7 @@ $DRUSH -y dl $CONTRIB_MODULES
 $DRUSH dis overlay shortcut toolbar -y
 
 # enable modules
-$DRUSH en module_instructions admin_menu token pathauto -y
+$DRUSH en admin_menu token pathauto -y
 
 # print message
 echo "\nInstalled in $DRUPAL_DIR directory."
